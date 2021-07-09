@@ -25,7 +25,15 @@ exports.create = (req, res) => {
 
     new Sponsor({
         name: req.body.name,
-        type: req.body.type
+        type: req.body.type,
+        birth_date: req.body.birth_date,
+        description: req.body.description,
+        location: {
+            city: req.body.location.city,
+            district: req.body.location.district,
+            country: req.body.location.country,
+        },
+        active: req.body.active
     }).save((error, sponsor) => {
         if (error) console.log('Ops! Ocorreu um erro' + error)
         const message = SponsorMessages.success.s0

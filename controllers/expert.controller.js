@@ -34,7 +34,7 @@ exports.create = (req, res) => {
         },
         auth: {
             username: req.body.auth.username,
-            password: req.body.auth.password
+            password: req.body.auth.password,
         }
     }).save((error, expert) => {
         if (error) console.log('Ops! Ocorreu um erro ->' + error + ": " + expert)

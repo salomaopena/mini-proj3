@@ -15,4 +15,4 @@ const sponsorSchema = new Schema({
     active: { type: Boolean, default: true },
 });
 
-module.exports = global.mongoConnection.model(CONFIG.mongodb.collections.sponsor, sponsorSchema);
+module.exports = global.mongoConnection.model(CONFIG.mongodb.collections.sponsor, sponsorSchema)
